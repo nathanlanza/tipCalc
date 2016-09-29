@@ -12,5 +12,6 @@ Extra features:
 - UI is themed up to the limits of my non-artistic self.
 - The UITextField for the bill is the firstResponder upon app launch so that the keyboard is shown immediately.
 - App shows the dollar values for splitting the bill multiple ways.
+- Locale support for currency symbols.
 
 <img src="http://i.imgur.com/kfyPe3A.gif">
