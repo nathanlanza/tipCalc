@@ -7,7 +7,22 @@ public class Tip: NSManagedObject {
     @NSManaged var tipPercentage: Double
     
     var cellString: String {
-        return "Bill: \(bill), Tip: \(bill * tipPercentage)"
+        return "Bill: " + string(from: bill) + ", Tip: " + string(from: bill * tipPercentage)
+    }
+    
+    var nf: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.minimumFractionDigits = 2
+        nf.maximumFractionDigits = 2
+        nf.minimumIntegerDigits = 1
+        nf.alwaysShowsDecimalSeparator = true
+        nf.locale = Locale.current
+        nf.numberStyle = .currency
+        return nf
+    }()
+    
+    func string(from double: Double) -> String {
+        return nf.string(from: NSNumber(value: double))!
     }
 }
 

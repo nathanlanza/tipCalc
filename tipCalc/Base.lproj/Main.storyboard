@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A304a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TDc-hM-ykA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TDc-hM-ykA">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -11,7 +11,7 @@
         <!--Tip Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TipViewController" customModule="tipCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TipViewController" customModule="nTip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -30,14 +30,14 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ViD-xg-laS">
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$" placeholder="0" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RlK-DF-ehU">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdy-BB-zA7">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="LCc-MY-bb4"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="t9Q-8w-70P"/>
                                                 </constraints>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="55"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                            </textField>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSM-AV-Ket">
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="5Lc-ht-eaT"/>
@@ -53,7 +53,7 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QCD-iA-3Iv">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5O-au-Ibd">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5O-au-Ibd">
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="J2u-ck-ti8"/>
                                                 </constraints>
@@ -84,7 +84,7 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qq-9R-wRa">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCs-eE-gqt">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCs-eE-gqt">
                                                 <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -99,6 +99,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="0qq-9R-wRa" firstAttribute="height" secondItem="ViD-xg-laS" secondAttribute="height" id="Ebh-xV-IBy"/>
+                                    <constraint firstItem="CCs-eE-gqt" firstAttribute="trailing" secondItem="Y5O-au-Ibd" secondAttribute="trailing" id="Th5-bp-bax"/>
+                                    <constraint firstItem="Y5O-au-Ibd" firstAttribute="leading" secondItem="Xdy-BB-zA7" secondAttribute="leading" id="aMO-Yf-Sh7"/>
+                                    <constraint firstItem="CCs-eE-gqt" firstAttribute="leading" secondItem="Y5O-au-Ibd" secondAttribute="leading" id="kYv-a6-oww"/>
+                                    <constraint firstItem="Y5O-au-Ibd" firstAttribute="trailing" secondItem="Xdy-BB-zA7" secondAttribute="trailing" id="yA5-sX-x1D"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="x2l-fY-vXx">
@@ -144,6 +148,7 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User Male-100" translatesAutoresizingMaskIntoConstraints="NO" id="58b-fx-3AN">
+                                                <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="58b-fx-3AN" secondAttribute="height" id="QM1-y7-QYO"/>
                                                     <constraint firstAttribute="height" constant="45" id="mqC-lJ-xZV"/>
@@ -244,6 +249,12 @@
                         <outlet property="tipPercentLabel" destination="z3G-Nk-CXY" id="sv0-2k-L4c"/>
                         <outlet property="totalLabel" destination="gZh-DM-7uQ" id="8Gv-yO-snY"/>
                         <outlet property="twoSplitLabel" destination="UNj-Cx-zYP" id="d9B-43-yV6"/>
+                        <outletCollection property="dollarSigns" destination="CCs-eE-gqt" collectionClass="NSMutableArray" id="aud-dc-dCT"/>
+                        <outletCollection property="dollarSigns" destination="Y5O-au-Ibd" collectionClass="NSMutableArray" id="hBx-ZL-QZ7"/>
+                        <outletCollection property="dollarSigns" destination="Xdy-BB-zA7" collectionClass="NSMutableArray" id="6LM-Gf-WgN"/>
+                        <outletCollection property="dollarSigns" destination="HGi-iw-PSM" collectionClass="NSMutableArray" id="wye-re-76w"/>
+                        <outletCollection property="dollarSigns" destination="Gbd-tl-qyZ" collectionClass="NSMutableArray" id="Hmx-RH-nxY"/>
+                        <outletCollection property="dollarSigns" destination="898-XF-spY" collectionClass="NSMutableArray" id="EZM-oJ-t3h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -253,7 +264,7 @@
         <!--History Table View Controller-->
         <scene sceneID="ExU-7d-EVV">
             <objects>
-                <tableViewController id="SPm-4Q-0tN" customClass="HistoryTableViewController" customModule="tipCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="SPm-4Q-0tN" customClass="HistoryTableViewController" customModule="nTip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yac-S6-8H3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -319,7 +330,7 @@
         <!--Settings-->
         <scene sceneID="6kf-eF-HYU">
             <objects>
-                <viewController title="Settings" id="1KC-Je-Rnx" customClass="SettingsViewController" customModule="tipCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" id="1KC-Je-Rnx" customClass="SettingsViewController" customModule="nTip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zgc-O7-jDT"/>
                         <viewControllerLayoutGuide type="bottom" id="JL6-4d-4XL"/>
@@ -334,11 +345,11 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Percentage" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K75-WJ-dK5">
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.36451062817258884" green="0.36451062817258884" blue="0.36451062817258884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fb-VO-uG7">
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.36451062817258884" green="0.36451062817258884" blue="0.36451062817258884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
@@ -348,11 +359,11 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days To Keep History" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EC-n4-Xf0">
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.36451062817258884" green="0.36451062817258884" blue="0.36451062817258884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UDy-Vb-Jg1">
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
@@ -364,7 +375,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.62320378200000004" green="0.91754371759999998" blue="0.64263103700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.62352941176470589" green="0.91764705882352937" blue="0.64313725490196072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FWI-2j-3uk" firstAttribute="leading" secondItem="ZYt-vc-lQA" secondAttribute="leadingMargin" id="VhN-g0-wd7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FWI-2j-3uk" secondAttribute="trailing" id="Wmq-ue-WxN"/>

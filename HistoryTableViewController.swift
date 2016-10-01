@@ -3,13 +3,9 @@ import CoreData
 
 class HistoryTableViewController: UITableViewController {
     
+
     let context = CoreData.shared.context
     var frc: NSFetchedResultsController<Tip>
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        try! frc.performFetch()
-//    }
     
     required init?(coder aDecoder: NSCoder) {
         let request = Tip.request
@@ -42,7 +38,7 @@ class HistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 43
-        
+        view.backgroundColor = #colorLiteral(red: 1, green: 0.9776893742, blue: 0.9104471857, alpha: 1)
     }
     // MARK: - Table view data source
 
@@ -62,8 +58,17 @@ class HistoryTableViewController: UITableViewController {
         let tipItem = frc.object(at: indexPath)
         cell.textLabel?.text = tipItem.cellString
         cell.detailTextLabel?.text = Lets.df.string(from: tipItem.date)
-
+        cell.backgroundColor = #colorLiteral(red: 0.9433692893, green: 0.9237497946, blue: 0.8648913103, alpha: 1)
+        
+        cell.textLabel?.textColor = #colorLiteral(red: 0.3493813452, green: 0.3493813452, blue: 0.3493813452, alpha: 1)
+        cell.detailTextLabel?.textColor = #colorLiteral(red: 0.3493813452, green: 0.3493813452, blue: 0.3493813452, alpha: 1)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let view = view as! UITableViewHeaderFooterView
+        view.tintColor = #colorLiteral(red: 0.6235294118, green: 0.9176470588, blue: 0.6431372549, alpha: 1)
+        view.textLabel?.textColor = #colorLiteral(red: 0.3493813452, green: 0.3493813452, blue: 0.3493813452, alpha: 1)
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
